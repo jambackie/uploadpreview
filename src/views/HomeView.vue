@@ -1,30 +1,17 @@
 <template>
-  <div>
-    <label>
-      +
-      <input
-        type="file"
-        @change="previewFiles"
-        webkitdirectory
-        directory
-        multiple
-      />
-    </label>
+  <div class="home">
+    <AddFiles class="home__add">Выбрать папку</AddFiles>
     <button @click="toPreview">preview</button>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import AddFiles from '@/components/AddFiles.vue'
+
 export default {
   name: 'HomeView',
-
+  components: { AddFiles },
   methods: {
-    ...mapMutations('files', ['setFiles']),
-    previewFiles(event) {
-      const files = Object.values(event.target.files)
-      this.setFiles(files)
-    },
     toPreview() {
       this.$router.push('preview')
     },

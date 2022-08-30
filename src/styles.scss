@@ -6,6 +6,35 @@
   box-sizing: border-box;
 }
 
+.option {
+  display: block;
+
+  &__input {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    background: var(--bg) no-repeat;
+  }
+}
+
+.home {
+
+  &__add {
+    width: 120px;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
 .preview {
   position: relative;
   display: flex;
