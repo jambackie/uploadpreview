@@ -10,6 +10,7 @@
         multiple
       />
     </label>
+    <button @click="toPreview">preview</button>
   </div>
 </template>
 
@@ -23,6 +24,9 @@ export default {
     previewFiles(event) {
       const files = Object.values(event.target.files)
       this.setFiles(files)
+    },
+    toPreview() {
+      this.$router.push('preview')
     },
   },
 }
