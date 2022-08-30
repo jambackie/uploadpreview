@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.preview {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  &__controls {
+    position: absolute;
+  }
+
+  &__img {
+    position: absolute;
+  }
+}
