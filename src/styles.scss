@@ -59,12 +59,15 @@ button {
   justify-content: center;
 
   &__add {
-    width: 160px;
+    max-width: 160px;
+    width: 30%;
     font-size: 20px;
   }
 
   &__settings {
     margin: 60px 0 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .option {
       width: 120px;
@@ -173,6 +176,21 @@ button {
   .preview__img-square {
     width: 80vw;
     height: 80vw;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .home__settings .option {
+    width: 60px;
+  }
+
+  .preview .option {
+    width: 20px;
+  }
+
+  .preview__btn {
+    width: 20px;
+    height: 20px;
   }
 }
 
