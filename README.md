@@ -1,5 +1,8 @@
 # uploadpreview
 
+## Demo:
+https://jambackie.github.io/uploadpreview/
+
 ## Project setup
 ```
 npm install
