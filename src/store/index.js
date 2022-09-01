@@ -3,9 +3,15 @@ import { filesModule } from './filesModule'
 import { settingsModule } from './settingsModule'
 
 export default createStore({
-  state: {},
+  state: {
+    fullscreen: false,
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    toggleFullscreen(state) {
+      state.fullscreen = !state.fullscreen
+    },
+  },
   actions: {},
   modules: {
     files: filesModule,

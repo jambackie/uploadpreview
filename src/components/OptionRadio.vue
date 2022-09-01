@@ -1,5 +1,5 @@
 <template>
-  <label class="option" :style="src">
+  <label class="option" :class="optionClasses()" :style="src">
     <input
       class="option__input"
       type="radio"
@@ -39,6 +39,11 @@ export default {
     ...mapMutations('settings', ['setCurrent']),
     change() {
       this.setCurrent(this.option)
+    },
+    optionClasses() {
+      return {
+        'option-active': this.currentSetting === this.option,
+      }
     },
   },
 }
