@@ -39,6 +39,7 @@ export default {
     ...mapMutations('settings', ['setCurrent']),
     change() {
       this.setCurrent(this.option)
+      localStorage.setItem('uploadpreviewOption', this.option)
     },
     optionClasses() {
       return {
